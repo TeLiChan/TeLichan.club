@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.0 -->
+    <script>
+        window.materialVersion = "1.5.0"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+    <link rel="dns-prefetch" href="https://cdn1.lncld.net"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    
+    <title>
+        
+            随记（三）：因为年轻-所以放浪 | 
+        
+        TeLiChan’s Blog
+    </title>
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="TeLiChan">
+    <meta name="description" itemprop="description" content="
+
+ON THE WAY
+
+
+三毛说：“旅行真正的快乐不在于目的地，而在于它的过程。遇见不同的人，遭遇奇奇怪怪的事，克服种种困难，听听不同的语言，在我都是很大的快乐。虽说一沙一世界，一花一天堂更何况世界上不止一沙一花，世界是多少奇奇妙妙的现象累积起来的。”">
+    <meta name="keywords" content="null">
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="TeLiChan’s Blog">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icon -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://telichan.club">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="随记（三）：因为年轻-所以放浪 | TeLiChan’s Blog">
+    <meta property="og:image" content="http://telichan.club/img/favicon.png" />
+    <meta property="og:description" content="
+
+ON THE WAY
+
+
+三毛说：“旅行真正的快乐不在于目的地，而在于它的过程。遇见不同的人，遭遇奇奇怪怪的事，克服种种困难，听听不同的语言，在我都是很大的快乐。虽说一沙一世界，一花一天堂更何况世界上不止一沙一花，世界是多少奇奇妙妙的现象累积起来的。”">
+    
+
+    
+        <meta property="article:published_time" content="Fri Mar 17 2017 23:09:13 GMT+0800" />
+        <meta property="article:modified_time" content="Mon May 07 2018 17:07:39 GMT+0800" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="随记（三）：因为年轻-所以放浪 | TeLiChan’s Blog">
+    <meta name="twitter:description" content="
+
+ON THE WAY
+
+
+三毛说：“旅行真正的快乐不在于目的地，而在于它的过程。遇见不同的人，遭遇奇奇怪怪的事，克服种种困难，听听不同的语言，在我都是很大的快乐。虽说一沙一世界，一花一天堂更何况世界上不止一沙一花，世界是多少奇奇妙妙的现象累积起来的。”">
+    <meta name="twitter:image" content="http://telichan.club/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://telichan.club" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://telichan.club/2017/03/17/Talk-Youth/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://telichan.club/2017/03/17/Talk-Youth/index.html",
+    "headline": "随记（三）：因为年轻-所以放浪",
+    "datePublished": "Fri Mar 17 2017 23:09:13 GMT+0800",
+    "dateModified": "Mon May 07 2018 17:07:39 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "TeLiChan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "因为特立，所以独行"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "TeLiChan’s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "null",
+    "description": "
+
+ON THE WAY
+
+
+三毛说：“旅行真正的快乐不在于目的地，而在于它的过程。遇见不同的人，遭遇奇奇怪怪的事，克服种种困难，听听不同的语言，在我都是很大的快乐。虽说一沙一世界，一花一天堂更何况世界上不止一沙一花，世界是多少奇奇妙妙的现象累积起来的。”",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?cdb4a5c0e1970ef34090969ef91c6585';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.</span> <span class="post-toc-text">ON THE WAY</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                随记（三）：因为年轻-所以放浪
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>TeLiChan</strong>
+        <span>3月 17, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=随记（三）：因为年轻-所以放浪&url=http://telichan.club/2017/03/17/Talk-Youth/index.html&pic=http://telichan.club/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=随记（三）：因为年轻-所以放浪&url=http://telichan.club/2017/03/17/Talk-Youth/index.html&via=TeLiChan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://telichan.club/2017/03/17/Talk-Youth/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://telichan.club/2017/03/17/Talk-Youth/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=TeLiChan’s Blog&title=随记（三）：因为年轻-所以放浪&summary=null&pics=http://telichan.club/img/favicon.png&url=http://telichan.club/2017/03/17/Talk-Youth/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <center><img src="/img/15.jpg"><br></center>
+
+<center><h1><b>ON THE WAY</b></h1><br></center>
+
+
+<p>三毛说：“旅行真正的快乐不在于目的地，而在于它的过程。遇见不同的人，遭遇奇奇怪怪的事，克服种种困难，听听不同的语言，在我都是很大的快乐。虽说一沙一世界，一花一天堂更何况世界上不止一沙一花，世界是多少奇奇妙妙的现象累积起来的。”</p>
+<a id="more"></a>
+<p>时间过得好快，转眼我就已经十九岁了。有时候发愣会开始思考，这个世界到底是怎么样的。好奇使然已久，我决定用暑假是时间出去看一看。</p>
+<p>顺道凑上了朋友QIU一起。</p>
+<p>到了出发那天，我拎起背包，锁上宿舍门，然后和隔壁宿舍还未离校的同学打了个招呼。他说要陪我到公交站，送我一程。发觉不太对，这画风怎么有一种视死如归上战场的既视感。</p>
+<p>我这同学也挺有意思的，高考结束后独自一人坐火车去了丽江，整整一个星期都呆在丽江古城，我也是服气，毕竟丽江古城换我的话一晚上就可以逛完了，但这不就是旅行嘛，做自己想做的。等我回来之后，我也可以很酷的告诉别人，我也去过很多地方。</p>
+<center><img src="/img/2.jpg"><br></center>
+
+
+<p>抵达机场，发生了第一件惨事，没搭过飞机的我掐点失误，导致眼睁睁的看着飞机就这样离我而去。为了不打乱计划，我们只得改签下一航班，补了我购买特价票的近三倍价钱。</p>
+<p>办理改签时，服务台的阿姨从头到尾都不吝啬她的微笑与我交谈，为了不被发现我第一次搭飞机这么蠢，我也一直勉强微笑，尽量不显得尴尬。包括我从钱包掏钱到递钱的那一瞬间，非常真实的感受到钱包揣在裤兜里没有那种难受的感觉了，笑容非常走心。</p>
+<center><img src="/img/(zhaoxi.net)(1).png"><br></center>
+
+<center>上机后</center><br>我：“诶，这飞机起飞什么感觉啊，是不是跟在地面一样”<br>朋友：“不是”<br>我：“空姐真的挺漂亮的耶，可以让她给我一杯葡萄汁不”<br>朋友：“不可以”<br>我：“我如果一直让她给我倒果汁，空姐会不会觉得我很low啊”<br>朋友：“……”<br><br><center>上天后</center><br>我：“哇，卧槽，飞机准备起飞了”<br>朋友微笑望着我。<br>我：“妈啊，做过山车一样，好恐怖。已经飞那么高了，我好害怕。”<br>朋友继续微笑。<br>我：“那个……我能自拍装逼吗？可是好怕被后面的乘客发现，这样显得我第一次搭飞机，略山炮”<br>我朋友终于受不了我，白眼着无奈怒道：“好了！你真是够了，笑死我了，和你一起坐飞机真的好丢脸。”<br>我：“……”<br><br>经过一个小时的飞行，晚上凌晨一点终于抵达贵阳的青旅。<br><br><center><img src="/img/3.jpg"><br></center>
+
+<p>第二天起床简单洗漱一下，便出去觅食。逛了一圈，不知道是我们没找到还是怎样，一路上都没有发现什么本地特色早餐，只好随便找点吃的。<br>坐上公交，前往我们本次贵阳之旅的唯一目的地—黔灵山。</p>
+<center><img src="/img/4.jpg"><br></center>
+
+<p>黔灵山说特别的也没有，就是猴子特别多，会在路上抢你东西追着你到处跑的那种坏猴子。</p>
+<center><img src="/img/5.jpg"><br></center><br><center><img src="/img/7.jpg"><br></center><br><center><img src="/img/6.jpg"><br></center>
+
+<p>搭公交从黔灵山回到青旅，休息一下，准备前往火车站离开贵阳赶往昆明。因为贵阳只是我们的途径地，所以待得时间不长。<br>顺便说说，在贵阳，我所见到的公交都是双层的，而广东倒是很少见。</p>
+<center><img src="/img/8.jpg"><br></center>
+
+<p>通过火车，贵阳启程，途径昆明，最后到达大理。 </p>
+<center><img src="/img/9.jpg"><br></center>
+
+<p>火车上卖的东西都比较贵，包括火车上特供的怡宝。</p>
+<center><img src="/img/10.jpg"><br></center>
+
+<p>漫长的铁路之旅，我一路上都在窗外寻觅着，期待亲眼看见“大理”两个字影。临近大理，我开始不停的打开手机微信定位自己的位置，好像会害怕自己不小心就错过大理的一切。消遣无聊时间之际，我只好打开ipod，一边调到郝云的去大理反复循环着听，一边愣愣的望着窗外。</p>
+<p>望着望着，一幢幢粉刷着白色墙面的民居房聚集着建在这片土地上，我意识到，这里应该就是大理，白族人民生活的地方。</p>
+<p>刚下火车，穿着短袖的我就感到一阵寒意袭来。在这海拔两千米的地域，让我一下子就忘却了现在是七月份，应该正当烈日高照的的炎热天气。由于抵达时天空阴阴的，担心下雨的我们便直接奔向青旅，坐落于离大理古城还算近的大公路边。 </p>
+<center><img src="/img/14.jpg"><br></center>
+
+<p>从青旅打开窗户望去，感受着这片土地带来的宁静，呼吸着海拔两千米的空气，一切都那么自然舒适，仿佛浮躁的心灵都得到净化，变得平和。 </p>
+<p>我们是下午到的大理，决定好了晚上去大理古城逛，因为听人说晚上溜达古城更热闹，也更有趣一点。但令我们没想到的是，由于大理的经度偏西，天黑的晚，直到晚上时间八点多，天仍旧发着亮光。</p>
+<center><img src="/img/12.jpg"><br></center>
+
+<p>走进洱海门，即身处大理古城。一进门，街道两旁的首饰摊位有次序的排列着。确如很多人所说的，古城已经变得越来越商业化，随处可见的特产店与酒吧应接不暇，但古城依旧散发着本身大理的味道，总得来说热闹得还算宁静。</p>
+<p>让我意外的是，居然发现大理第四中学建立于古城中心地带，我们去的时间刚好是学生晚自习下课的时间，吸引我的是他们的校服。宝蓝色的底，白色的衣领边，看似整体款式为水手服，但设计却有着大理的独特民族特色。也许是因为古城坐落了一间学校，给大理古城增添上了一层浓厚的人文气息，使之渐渐地成为了文青的聚集地。</p>
+<p>我喜欢大理古城很重要的一点，是因为整个古城酒吧里的驻场歌手的声音都让我沉醉，这是种让人有共鸣的表达方式。然而，我不可能走进每一个酒吧。大家都清楚，酒吧里的消费一般都不便宜，有些还限制底消。</p>
+<p>为此，我只能楞在酒吧门口的街上听到热泪盈眶。</p>
+<p>听说我们所住的青旅提供敞篷普吉环洱海一日游的服务，索性我们也决定去玩玩。第二天一早八点，我们便准备好下楼吃早餐。带队的司机人称大飞哥，之前在去哪儿的评论就有印象，说他人很好，没想到他带的人就是我们。与我们同车环游的还有青旅的另外两个大哥。当我们走到车旁边，才发现车好像是那种车厂组装起来的三无吉普，但看着还算拉风。</p>
+<center><img src="/img/2、13.jpg"><br></center>
+
+<p>天气比昨天要晴朗得多，旅途也开始有趣起来。</p>
+<center><img src="/img/14.jpg"><br></center>
+
+<p>大飞哥得称他为逼王，各种教我们装逼。一路上拍照也是他教我们如何摆的不带重复的风骚姿势。随着心情的变化，音乐从清新民谣换到节奏电音，到后来我们一齐站起来从车里探出头狂喊，自然地从生活中的压抑释放出真正的自我。</p>
+<center><img src="/img/155175174638543756 (2).jpg"><br></center><br><center><img src="/img/843753922781094283 (2).jpg"><br></center>
+
+<p>从古城出发，途径喜洲、双廊，最后回到青旅，一天的环洱海之旅就此结束。</p>
+<p>双廊不算是好玩，但绝对是个适合休息的好地方。坐在洱海边上，听着耳机里传来的音乐，微风吹着你的头发，感受着最舒服的天气，让我怀念至今。</p>
+<center><img src="/img/694778794778204280.jpg"><br></center>
+
+<p>大理逗留了三天，我们便启身前往丽江。<br>但是对于丽江，在此不多说，因为当地人的一些行为导致发生不愉快的事情，这实在让我提不起兴致。</p>
+<p>云南的最后一站—香格里拉</p>
+<p>香格里拉被当地藏民心中译为“心中的明月”。原本香格里拉并不在我们旅行计划内，我们临时决定跟着一位青旅遇到的老乡同去虎跳峡看看。前往虎跳峡的路上真的让我见识了什么叫老司机，由于上山道路崎岖且道路狭小，司机每转一个弯，我都是悬着心看着路面，车辆轮胎离山下的悬崖就只有不到三四十厘米，惊险程度简直不亚于过山车。</p>
+<center><img src="/img/17.jpg"><br></center>
+
+<p>到达虎跳峡，还需自己往山下徒步一段山路，只要一不注意就会滑落到山脚，加上几乎没有防护栏，我们每一步都走得格外小心。走到一半路，就已经听到江水撞击石头的巨大响声，我们变得激动起来，加快着脚步。</p>
+<center><img src="/img/18.jpg"><br></center>
+
+<p>一个小时的徒步，终于到达观景台。</p>
+<p>奔涌的江水近在眼前，我不知道该如何形容看到的景观，因为无论视觉与听觉都如此震撼人心！汹涌澎湃的江水如同无所畏惧的猛虎下山，从上游奔流而下，风驰电掣，波涛四溅，撞击石头发出震耳欲聋的声音，足以让整个山谷轰鸣颤抖。</p>
+<center><img src="/img/20.jpg"><br></center>
+
+<p>这是无法想象的震撼，亲身经历才会感受到大自然的伟大雄伟。闭眼，感受，咆哮的水声从脚底穿透身体直击内心，这时的我好像变得异常勇敢地去面对生活，一切烦恼都那么不值得一提。而我们，是那么的渺小。</p>
+<center><img src="/img/19.jpg"><br></center>
+
+
+<p>香格里拉是我和同伴一起走过的最后一个地点，我们的旅途也随着同伴的先行离开暂告一个段落。同行这么多天，我们两人之间一起体验过未知，也相互赌气过。</p>
+<center><img src="/img/16.jpg"><br></center>
+
+<p>总之，一路上，感谢有你的陪伴。因为你，我才有勇气去冒险。</p>
+<p>而我还没停下脚步，从云南出发，下一个城市，重庆。</p>
+<p>接下来的旅行，属于我一个人的。</p>
+<p>我的故事还未完，下次的更有趣。</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=18127334&auto=1&height=66"></iframe>
+
+<p>本文原创自 : <a href="http://telichan.club/">TeLiCHAN</a></p>
+<center>*本文未经站长允许可随意转载</center><hr><br><center><img src="/img/wei.png"><br></center>
+
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <div id="comment" class="comment"></div>
+<script>
+    window.onload = function() {
+        new Valine({
+            av: AV, // source from av-min.js
+            el: '.comment',
+            app_id: "W4WqPOf96mMUwBI1oPOvszwm-gzGzoHsz",
+            app_key: "GEp1KzpuyHK1IVdfaQNmo6dl",
+            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+        });
+    }
+</script>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/07/29/Vlog：Road-2/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/03/16/Talk-musicFestivel/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="TeLiChan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        chen840160452@163.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: chen840160452@163.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/06/">六月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/11/">十一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/10/">十月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/09/">九月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/前端门/">前端门<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/categories/技术学/">技术学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/生活志/">生活志<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/观点论/">观点论<span class="sidebar_archives-count">3</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/vlog" title="视">
+                
+                    <i class="material-icons sidebar-material-icons">theaters</i>
+                
+                视
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="摄">
+                
+                    <i class="material-icons sidebar-material-icons">dashboard</i>
+                
+                摄
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/song" title="曲">
+                
+                    <i class="material-icons sidebar-material-icons">equalizer</i>
+                
+                曲
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/about" title="我">
+                
+                    <i class="material-icons sidebar-material-icons">accessibility</i>
+                
+                我
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">18</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/twitter" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/facebook" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+        <a href="https://www.google.com/" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-gplus">
+                <span class="visuallyhidden">Google Plus</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            友情链接：<a href="http://www.ivanhsu.me/">我心随风</a>&nbsp|Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>TeLiChan’s Blog
+            
+            <br>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<span id="busuanzi_container_site_pv" > 
+  浏览量<span id="busuanzi_value_site_pv"></span>次/
+
+<span id="busuanzi_container_site_uv"> 
+   访客数<span id="busuanzi_value_site_uv"></span>人&nbsp&nbsp&nbsp
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
