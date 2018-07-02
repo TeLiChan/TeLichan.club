@@ -39,7 +39,7 @@
     
     <title>
         
-            JS中window.onload用法详解 | 
+            7.2/谈谈本地储存和垃圾回收机制（内存管理） | 
         
         TeLiChan’s Blog
     </title>
@@ -51,7 +51,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="TeLiChan">
     <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="null,JavaScript">
+    <meta name="keywords" content="null,Cookie Storage">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -233,18 +233,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://telichan.club">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="JS中window.onload用法详解 | TeLiChan’s Blog">
+    <meta property="og:title" content="7.2/谈谈本地储存和垃圾回收机制（内存管理） | TeLiChan’s Blog">
     <meta property="og:image" content="http://telichan.club/img/favicon.png" />
     <meta property="og:description" content="">
-    <meta property="og:article:tag" content="JavaScript"> 
+    <meta property="og:article:tag" content="Cookie Storage"> 
 
     
-        <meta property="article:published_time" content="Tue May 22 2018 13:00:00 GMT+0800" />
-        <meta property="article:modified_time" content="Tue Jun 12 2018 01:11:15 GMT+0800" />
+        <meta property="article:published_time" content="Mon Jul 02 2018 19:00:00 GMT+0800" />
+        <meta property="article:modified_time" content="Mon Jul 02 2018 19:02:38 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="JS中window.onload用法详解 | TeLiChan’s Blog">
+    <meta name="twitter:title" content="7.2/谈谈本地储存和垃圾回收机制（内存管理） | TeLiChan’s Blog">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://telichan.club/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -252,7 +252,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://telichan.club/2018/05/22/windowonload/index.html" />
+        <link rel="canonical" href="http://telichan.club/2018/07/02/local-storage/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -264,10 +264,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://telichan.club/2018/05/22/windowonload/index.html",
-    "headline": "JS中window.onload用法详解",
-    "datePublished": "Tue May 22 2018 13:00:00 GMT+0800",
-    "dateModified": "Tue Jun 12 2018 01:11:15 GMT+0800",
+    "mainEntityOfPage": "http://telichan.club/2018/07/02/local-storage/index.html",
+    "headline": "7.2/谈谈本地储存和垃圾回收机制（内存管理）",
+    "datePublished": "Mon Jul 02 2018 19:00:00 GMT+0800",
+    "dateModified": "Mon Jul 02 2018 19:02:38 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "TeLiChan",
@@ -285,7 +285,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",JavaScriptnull",
+    "keywords": ",Cookie Storagenull",
     "description": "",
 }
 </script>
@@ -360,7 +360,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#引言"><span class="post-toc-number">1.</span> <span class="post-toc-text">引言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#区别"><span class="post-toc-number">2.</span> <span class="post-toc-text">区别</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#事件处理函数绑定"><span class="post-toc-number">3.</span> <span class="post-toc-text">事件处理函数绑定</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#基本概念"><span class="post-toc-number">2.</span> <span class="post-toc-text">基本概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Cookie"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Cookie</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Web-Storage"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Web Storage</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三种方法比较"><span class="post-toc-number">3.</span> <span class="post-toc-text">三种方法比较</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#应用"><span class="post-toc-number">4.</span> <span class="post-toc-text">应用</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安全性的考虑"><span class="post-toc-number">5.</span> <span class="post-toc-text">安全性的考虑</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#垃圾回收机制"><span class="post-toc-number">6.</span> <span class="post-toc-text">垃圾回收机制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#原理"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#标识无用数据的策略"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">标识无用数据的策略</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#内存管理"><span class="post-toc-number">7.</span> <span class="post-toc-text">内存管理</span></a></li></ol>
     </ul>
     
 
@@ -392,7 +392,7 @@
         
     
             <p class="article-headline-p">
-                JS中window.onload用法详解
+                7.2/谈谈本地储存和垃圾回收机制（内存管理）
             </p>
         </div>
 
@@ -411,7 +411,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>TeLiChan</strong>
-        <span>5月 22, 2018</span>
+        <span>7月 02, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -435,7 +435,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
+        <a class="post_tag-link" href="/tags/Cookie-Storage/">Cookie Storage</a>
     </ul>
     
 
@@ -451,7 +451,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JS中window.onload用法详解&url=http://telichan.club/2018/05/22/windowonload/index.html&pic=http://telichan.club/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=7.2/谈谈本地储存和垃圾回收机制（内存管理）&url=http://telichan.club/2018/07/02/local-storage/index.html&pic=http://telichan.club/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -460,7 +460,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JS中window.onload用法详解&url=http://telichan.club/2018/05/22/windowonload/index.html&via=TeLiChan" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=7.2/谈谈本地储存和垃圾回收机制（内存管理）&url=http://telichan.club/2018/07/02/local-storage/index.html&via=TeLiChan" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -469,7 +469,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://telichan.club/2018/05/22/windowonload/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://telichan.club/2018/07/02/local-storage/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -478,7 +478,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://telichan.club/2018/05/22/windowonload/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://telichan.club/2018/07/02/local-storage/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -490,7 +490,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=TeLiChan’s Blog&title=JS中window.onload用法详解&summary=null&pics=http://telichan.club/img/favicon.png&url=http://telichan.club/2018/05/22/windowonload/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=TeLiChan’s Blog&title=7.2/谈谈本地储存和垃圾回收机制（内存管理）&summary=null&pics=http://telichan.club/img/favicon.png&url=http://telichan.club/2018/07/02/local-storage/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -508,215 +508,74 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>网页中的javaScript脚本代码往往需要在文档加载完成后才能够去执行，否则可能导致无法获取对象的情况，为了避免这种情况的发生，可以使用以下两种方式:</p>
-<p>一. <strong>将脚本代码放在网页的底端</strong>，这样在运行脚本代码的时候，可以确保要操作的对象已经加载完成。<br>二.通过 <strong>window.onload来执行</strong> 脚本代码。</p>
-<h1 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h1><p>第一种方式感觉比较凌乱（其实推荐使用），往往我们需要将脚本代码放在一个更为合适的地方，那么window.onload方式就是一个良好的选择。window.onload是一个事件，当文档加载完成之后就会触发该事件，可以为此事件注册事件处理函数，并将要执行的脚本代码放在事件处理函数中，于是就可以避免获取不到对象的情况。先看一段代码实例:</p>
-<pre><code>&lt;!DOCTYPE html&gt;   
-&lt;html&gt;   
-&lt;head&gt;   
-&lt;meta charset=&quot; utf-8&quot;&gt;   
-&lt;meta name=&quot;author&quot; content=&quot;http://www.softwhy.com/&quot; /&gt; 
-&lt;title&gt;window.onload用法-蚂蚁部落&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-#bg{
-  width:100px;
-  height:100px;
-  border:2px solid red;
-}
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-document.getElementById(&quot;bg&quot;).style.backgroundColor=&quot;#F90&quot;;
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id=&quot;bg&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>以上代码的初衷是向将div的背景颜色设置为#F90，但是并没有实现此效果，这是因为代码是顺序执行的，当执行到document.getElementById(“#bg”).style.backgroundColor=”#F90”这一句的时候，还没有加载到此div对象，所以设置也就不能够成功。</p>
-<p>代码修改如下:</p>
-<pre><code>&lt;!DOCTYPE html&gt;   
-&lt;html&gt;   
-&lt;head&gt;   
-&lt;meta charset=&quot; utf-8&quot;&gt;   
-&lt;meta name=&quot;author&quot; content=&quot;http://www.softwhy.com/&quot; /&gt; 
-&lt;title&gt;位置高度div垂直居中-蚂蚁部落&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-#bg{
-  width:100px;
-  height:100px;
-  border:2px solid red;
-}
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-window.onload=function(){
-  document.getElementById(&quot;bg&quot;).style.backgroundColor=&quot;#F90&quot;;
-}
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id=&quot;bg&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>以上代码实现了将div背景颜色设置为#F90的目的。原因就是讲设置背景颜色的代码放置在window.onload的事件处理函数中，只有当文档加载完成后，才会执行事件处理函数，也才会执行设置背景颜色的脚本代码。</p>
-<h1 id="事件处理函数绑定"><a href="#事件处理函数绑定" class="headerlink" title="事件处理函数绑定"></a>事件处理函数绑定</h1><p><strong>方式一</strong><br>window.onload=function(){}，在以上代码中就是使用此种方式为window.onload事件绑定事件处理函数，这里绑定的是一个匿名函数，当然也可以绑定非匿名函数，代码实例如下:</p>
-<pre><code>&lt;!DOCTYPE html&gt;   
-&lt;html&gt;   
-&lt;head&gt;   
-&lt;meta charset=&quot; utf-8&quot;&gt;   
-&lt;meta name=&quot;author&quot; content=&quot;http://www.softwhy.com/&quot; /&gt; 
-&lt;title&gt;window.onload用法详解-蚂蚁部落&lt;/title&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-window.onload=function myalert()
-{
-  alert(&quot;绑定成功！&quot;);
-}
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天在慕课网学习时，谈到了本地存储的知识（主要是Cookie和Storage），下面将总结一下相关知识点。</p>
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><p>Cookie是在HTTP协议下，服务器或脚本可以维护客户工作站上信息的一种方式。由Web服务器保存在用户浏览器（客户端）上的小本文文件。它可以包含有关用户的信息。比如你登录某个网站市场可以看到“记住密码”，这通常就是通过在 Cookie 中存入一段辨别用户身份的数据来实现的。目前有些 Cookie 是临时的，有些则是持续的。</p>
+<p>另外cookie还需要指定作用域，不可以跨域调用。</p>
+<p><strong>优势</strong><br>具有极高的扩展性和可用性<br>1.通过良好的编程，控制保存在cookie中的session对象的大小。<br>2.通过加密和安全传输技术，减少cookie被破解的可能性。<br>3.只有在cookie中存放不敏感的数据，即使被盗取也不会有很大的损失。<br>4.控制cookie的生命期，使之不会永远有效。这样的话偷盗者很可能拿到的就是一个过期的cookie。</p>
+<p><strong>缺点</strong><br>1.cookie的长度和数量的限制。每个domain最多只能有20条cookie，每个cookie长度不能超过4KB，否则会被截掉。</p>
+<p>2.安全性问题。如果cookie被人拦掉了，那个人就可以获取到所有session信息。加密的话也不起什么作用。</p>
+<p>3.有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务端保存一个计数器。若吧计数器保存在客户端，则起不到什么作用。</p>
+<h2 id="Web-Storage"><a href="#Web-Storage" class="headerlink" title="Web Storage"></a>Web Storage</h2><p>实际上由两部分组成：<strong>sessionStorage</strong> 和 <strong>localStorage</strong>。</p>
+<p><strong>sessionStorage</strong> 用于本地存储一个会话(session)中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后（页面关闭）数据随之销毁。因此sessionStorage是一种持久化的本地存储，仅仅是会话级别的存储。</p>
+<p> <strong>localStorage</strong> 是 HTML5 标准中新加入的技术，用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+<p><strong>优势</strong><br>存储空间<br>存储空间 更大：IE8下每个独立的存储空间为10M，其他浏览器实现略有不同，但都比Cookie要大很多。</p>
+<p><strong>接口</strong><br>更多丰富易用的接口：Web Storage提供了一套更为丰富的接口，使得数据操作更为简便。<br><strong>服务器</strong><br>存储内容不会发送到服务器：当设置了Cookie后，Cookie的内容会随着请求一并发送的服务器，这对于本地存储的数据是一种带宽浪费。而Web Storage中的数据则仅仅是存在本地，不会与服务器发生任何交互。</p>
+<p><strong>存储空间</strong><br>独立的存储空间：每个域（包括子域）有独立的存储空间，各个存储空间是完全独立的，因此不会造成数据混乱。</p>
+<h1 id="三种方法比较"><a href="#三种方法比较" class="headerlink" title="三种方法比较"></a>三种方法比较</h1><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>cookoe</th>
+<th>localStorage</th>
+<th>sessionStorage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据生命周期</td>
+<td>一般由服务器生成，可设置失效时间。如果在浏览器端生成Cookie，默认是关闭浏览器后失效</td>
+<td>除非被清除，否则永久保存</td>
+<td>仅在当前会话下有效，关闭页面或浏览器后被清除</td>
+</tr>
+<tr>
+<td>存放数据大小</td>
+<td>4k左右</td>
+<td>一般为5MB</td>
+<td>← 同左</td>
+</tr>
+<tr>
+<td>与服务器端通信</td>
+<td>每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题</td>
+<td>仅在客户端（即浏览器）中保存，不参与和服务器的通信</td>
+<td>← 同左</td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>需要程序员自己封装，源生的Cookie接口不友好</td>
+<td>源生接口可以接受，亦可再次封装来对Object和Array有更好的支持</td>
+<td>← 同左</td>
+</tr>
+</tbody>
+</table>
+<h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><p>因为考虑到每个 HTTP 请求都会带着 Cookie 的信息，所以 Cookie当然是能精简就精简啦，比较常用的一个应用场景就是判断用户是否登录。针对登录过的用户，服务器端会在他登录时往 Cookie中插入一段加密过的唯一辨识单一用户的辨识码，下次只要读取这个值就可以判断当前用户是否登录啦。</p>
+<p>而另一方面 localStorage 接替了 Cookie 管理购物车的工作，同时也能胜任其他一些工作。比如HTML5游戏通常会产生一些本地数据，localStorage 也是非常适用的。如果遇到一些内容特别多的表单，为了优化用户体验，我们可能要把表单页面拆分成多个子页面，然后按步骤引导用户填写。这时候 sessionStorage 的作用就发挥出来了。</p>
+<h1 id="安全性的考虑"><a href="#安全性的考虑" class="headerlink" title="安全性的考虑"></a>安全性的考虑</h1><p>需要注意的是，不是什么数据都适合放在 Cookie、localStorage 和 sessionStorage 中的。使用它们的时候，需要时刻注意是否有代码存在 XSS 注入的风险。因为只要打开控制台，你就随意修改它们的值，也就是说如果你的网站中有 XSS 的风险，它们就能对你的 localStorage 肆意妄为。所以千万不要用它们存储你系统中的敏感数据。</p>
+<p>cookie的作用是与服务器进行交互，作为HTTP规范的一部分存在，而web storage仅仅是为了在本地存储数据而生。</p>
+<h1 id="垃圾回收机制"><a href="#垃圾回收机制" class="headerlink" title="垃圾回收机制"></a>垃圾回收机制</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>垃圾收集器会定期（周期性）找出没有数据并释放，回收内存。</p>
+<h2 id="标识无用数据的策略"><a href="#标识无用数据的策略" class="headerlink" title="标识无用数据的策略"></a>标识无用数据的策略</h2><p> <strong>标记清除</strong><br> javascript中最常用的垃圾回收方式。当变量进入环境时，将这个变量标记为“进入环境”。当变量离开环境时，则将其标记为“离开环境”。标记“离开环境”的就回收内存。</p>
+<p>工作流程：<br>1.垃圾回收器，在运行的时候会给存储在内存中的所有变量都加上标记。<br>2.去掉环境中的变量以及被环境中的变量引用的变量的标记。<br>3.再被加上标记的会被视为准备删除的变量。<br>4.垃圾回收器完成内存清除工作，销毁那些带标记的值并回收他们所占用的内存空间。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function test()&#123;</span><br><span class="line">    var a = 10 ; //被标记 ，进入环境</span><br><span class="line">    var b = 20 ; //被标记 ，进入环境</span><br><span class="line">&#125;</span><br><span class="line">test(); //执行完毕 之后 a、b又被标离开环境，被回收。</span><br></pre></td></tr></table></figure>
+<p> <strong>引用计数</strong><br> 另一种不太常见的垃圾回收策略是引用计数。引用计数的含义是跟踪记录每个值被引用的次数。</p>
+<p> 工作流程：<br>1.声明了一个变量并将一个引用类型的值赋值给这个变量，这个引用类型值的引用次数就是1。<br>2.同一个值又被赋值给另一个变量，这个引用类型值的引用次数加1.<br>3.当包含这个引用类型值的变量又被赋值成另一个值了，那么这个引用类型值的引用次数减1.<br>4.当引用次数变成0时，说明没办法访问这个值了。<br>5.当垃圾收集器下一次运行时，它就会释放引用次数是0的值所占的内存。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function test()&#123;</span><br><span class="line">var xm = &#123;&#125; ; //xm的引用次数为1</span><br><span class="line">var xh = &#123;&#125; ; //xh的引用次数为1</span><br><span class="line">&#125;</span><br><span class="line">test()；</span><br><span class="line">xm = null; // 0</span><br><span class="line">xh = null; // 0</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">当循环引用，无法被回收。</span><br></pre></td></tr></table></figure>
+<p>function test(){<br>var xm = {} ; //xm的引用次数为1<br>var xh = {} ; //xh的引用次数为1<br>xm.wife = xh; //xh的引用次数为2<br>xh.husband = xm; //xm的引用次数为2<br>}<br>test()；<br>xm = null; // 1<br>xh = null; // 1<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">原因：IE9之前的浏览器里的BOM和DOM并不是原生的。通过C++在COM的基础上实现的，而COM使用的就是引用计数的回收机制。</span><br><span class="line">```  </span><br><span class="line">var element = document.getElementById(&quot;some_element&quot;);</span><br><span class="line">var myObj =new Object();</span><br><span class="line">myObj.element = element;</span><br><span class="line">element.someObject = myObj;  </span><br><span class="line">```    </span><br><span class="line">上面的代码，一个DOM元素(element)与一个原生JavaScript对象(myObj)之间建立了循环引用。其中，变量myObj有一个名为element的属性指向element；而变量element有一个名为someObject的属性回指到myObj。由于循环引用，即使将例子中的DOM从页面中移除，内存也永远不会回收。  </span><br><span class="line"></span><br><span class="line">**解决方法**：</span><br><span class="line">手动解除变量引用，可以消除循环引用现象。</span><br></pre></td></tr></table></figure></p>
+<p>myObj.element = null;<br>element.someObject =null;<br><code>`</code>   </p>
+<h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><p>分配给Web浏览器是少于桌面应用程序的内存，主要是出于安全方面的考虑。防止浏览器占用过多的内存，导致应用程序崩溃。确保占用少的内存，可以让页面获得更好的性能。</p>
+<p>优化内存最佳方式：只保留内存有用的数据，立即释放无用数据。</p>
+<p>释放内存的方法就是设置为 <strong>null</strong>，解除引用。适合于大多的全局变量。因为局部变量离开作用域的时候，会自动解除引用。</p>
+<hr>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>以上代码可以将为名myalert方法绑定到window.onload事件上，但是不能以以下方式为此事件绑定多个事件处理函数:</p>
-<pre><code>window.onload=function a(){}
-window.onload=function b(){}
-</code></pre><p>以上代码并不能为window.onload事件绑定多个事件处理函数，而是最后一个会覆盖前面的所有函数。不过代码可以变通一下:</p>
-<pre><code>&lt;!DOCTYPE html&gt;   
-&lt;html&gt;   
-&lt;head&gt;   
-&lt;meta charset=&quot; utf-8&quot;&gt;   
-&lt;meta name=&quot;author&quot; content=&quot;http://www.softwhy.com/&quot; /&gt; 
-&lt;title&gt;window.onload用法-蚂蚁部落&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-#bg{
-  width:100px;
-  height:100px;
-  border:2px solid red;
-}
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-window.onload=function(){
-  function a(){
-    document.getElementById(&quot;bg&quot;).style.backgroundColor=&quot;#F90&quot;;
-  }
-  function b(){
-    document.getElementById(&quot;bg&quot;).style.width=&quot;200px&quot;;
-  }
-  a();
-  b();
-}
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id=&quot;bg&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>以上代码实现了绑定多个事件处理函数同样的效果。</p>
-<p><strong>方式二</strong><br>可以使用addEventListener()和attachEvent()为onload事件绑定事件处理函数，下面分别介绍一下：addEventListener()是当前标准的一种事件处理函数绑定方式，但是IE8和IE8以下的浏览器并不支持此方式，实例如下</p>
-<pre><code>&lt;!DOCTYPE html&gt;   
-&lt;html&gt;   
-&lt;head&gt;   
-&lt;meta charset=&quot; utf-8&quot;&gt;   
-&lt;meta name=&quot;author&quot; content=&quot;http://www.softwhy.com/&quot; /&gt; 
-&lt;title&gt;window.onload用法-蚂蚁部落&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-#bg{
-  width:100px;
-  height:100px;
-  border:2px solid red;
-}
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-window.addEventListener(&quot;load&quot;,bg,false);
-window.addEventListener(&quot;load&quot;,changeW,false);
-function bg(){
-  document.getElementById(&quot;bg&quot;).style.backgroundColor=&quot;#F90&quot;;
-}
-function changeW(){
-  document.getElementById(&quot;bg&quot;).style.width=&quot;200px&quot;;
-}
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id=&quot;bg&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>以上代码可以为window.onload事件绑定多个事件处理函数。简单介绍一下语法格式:</p>
-<pre><code>addEventListener(&quot;type&quot;,函数名,false)
-</code></pre><p>addEventListener()函数具有三个参数，第一个 <strong>参数事件类型</strong>，需要注意的是，事件类型名称前面不能有on，例如window.onload事件，在这个地方只能写作load，第二个参数是要绑定的 <strong>函数名称</strong>，第三个参数一般为 <strong>false</strong>。<br>使用attachEvent()函数绑定事件处理函数:<br>IE9之前的的IE浏览器不支持addEventListener()函数，所以attachEvent()函数就有了用武之地了，代码实例如下:    </p>
-<pre><code>&lt;!DOCTYPE html&gt;   
-&lt;html&gt;   
-&lt;head&gt;   
-&lt;meta charset=&quot; utf-8&quot;&gt;   
-&lt;meta name=&quot;author&quot; content=&quot;http://www.softwhy.com/&quot; /&gt; 
-&lt;title&gt;window.onload用法-蚂蚁部落&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-#bg{
-  width:100px;
-  height:100px;
-  border:2px solid red;
-}
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-window.attachEvent(&quot;onload&quot;,bg);
-window.attachEvent(&quot;onload&quot;,changeW);
-function bg(){
-  document.getElementById(&quot;bg&quot;).style.backgroundColor=&quot;#F90&quot;;
-}
-function changeW(){
-  document.getElementById(&quot;bg&quot;).style.width=&quot;200px&quot;;
-}
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id=&quot;bg&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-</code></pre><p>以上代码的效果和使用addEventListener()函数的效果是一样的，简单介绍一下语法格式:</p>
-<pre><code>addEventListener(&quot;type&quot;,函数名)
-</code></pre><p>此函数只有两个参数，第一个参数是 <strong>事件类型</strong>，不过它和addEventListener()的第一个参数的作用是一样，但是名称有所区别，名称前面是具有”on”，第二个参数就是要绑定的事件处理 <strong>函数名称</strong>。为了兼容各浏览器，需要将以上代码进行改造，实例如下:</p>
-<pre><code>&lt;!DOCTYPE html&gt;   
-&lt;html&gt;   
-&lt;head&gt;   
-&lt;meta charset=&quot; utf-8&quot;&gt;   
-&lt;meta name=&quot;author&quot; content=&quot;http://www.softwhy.com/&quot; /&gt; 
-&lt;title&gt;window.onload用法-蚂蚁部落&lt;/title&gt;
-&lt;style type=&quot;text/css&quot;&gt;
-#bg{
-  width:100px;
-  height:100px;
-  border:2px solid red;
-}
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-if(window.addEventListener){
-  window.addEventListener(&quot;load&quot;,bg,false);
-  window.addEventListener(&quot;load&quot;,changeW,false);
-}
-else{
-  window.attachEvent(&quot;onload&quot;,bg);
-  window.attachEvent(&quot;onload&quot;,changeW);
-}
-
-function bg(){
-  document.getElementById(&quot;bg&quot;).style.backgroundColor=&quot;#F90&quot;;
-}
-function changeW(){
-  document.getElementById(&quot;bg&quot;).style.width=&quot;200px&quot;;
-}
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id=&quot;bg&quot;&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>以上代码代码解决了各大浏览器的兼容性问题。在上面代码中使用以下代码进行判断:</p>
-<pre><code>if(object.addEventListener){
-  object.addEventListener();
-}
-else{
-  object.attachEvent();
-}
-</code></pre><p>通过if语句判断对象是否具有addEventListener属性，如果有这使用addEventListener()函数，否则使用attachEvent()函数。</p>
-<p>本文来源： <a href="http://www.cnblogs.com/gaogaoxingxing/p/6108485.html" target="_blank" rel="noopener">没事就更</a></p>
+<p>深入理解回收机制，可以阅读此文：<a href="https://www.cnblogs.com/zhwl/p/4664604.html" target="_blank" rel="noopener">JavaScript垃圾回收机制</a><br>部分信息来源：<a href="http://jerryzou.com/posts/cookie-and-web-storage/" target="_blank" rel="noopener">咀嚼之味</a></p>
 
         
     
@@ -750,21 +609,13 @@ else{
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/06/22/CSS3-Triangle/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2018/05/09/Valine/" id="post_nav-older" class="next-content">
+        <a href="/2018/06/22/CSS3-Triangle/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
